@@ -1,8 +1,8 @@
 import { HttpException, HttpStatus, Inject, Injectable, Logger } from '@nestjs/common';
 import { Model } from 'mongoose';
-import { InventoryDao } from 'src/core/dao/restaurant.dao';
-import { CreateInventoryDto } from 'src/core/dto/restaurant.dto';
-import { Inventory } from 'src/core/interface/restaurant.interface';
+import { InventoryDao } from 'src/core/dao/inventory.dao';
+import { CreateInventoryDto } from 'src/core/dto/inventory.dto';
+import { Inventory } from 'src/core/interface/inventory.interface';
 import { LoggerConstant } from 'src/core/constants/loggerConstant';
 
 @Injectable()

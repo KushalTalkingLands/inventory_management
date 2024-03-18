@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { InventoryController } from './restaurant.controller';
-import { InventoryService } from './restaurant.service';
+import { InventoryController } from './inventory.controller';
+import { InventoryService } from './inventory.service';
 import { CoreModule } from 'src/core/core.module';
-import { InventoryDao } from 'src/core/dao/restaurant.dao';
+import { InventoryDao } from 'src/core/dao/inventory.dao';
 import { JwtModule } from '@nestjs/jwt';
 
 @Module({
@@ -16,4 +16,4 @@ import { JwtModule } from '@nestjs/jwt';
   controllers: [InventoryController],
   providers: [InventoryService,InventoryDao]
 })
-export class RestaurantModule {}
+export class InventoryModule {}

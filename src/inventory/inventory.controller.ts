@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, HttpException, HttpStatus, Logger, Param, Post, Put, UseGuards } from '@nestjs/common';
-import { CreateInventoryDto } from 'src/core/dto/restaurant.dto';
-import { Inventory } from 'src/core/interface/restaurant.interface';
-import { InventoryService } from './restaurant.service';
+import { CreateInventoryDto } from 'src/core/dto/inventory.dto';
+import { Inventory } from 'src/core/interface/inventory.interface';
+import { InventoryService } from './inventory.service';
 import { appConfig } from 'src/core/config/appConfig';
 import { LoggerConstant } from 'src/core/constants/loggerConstant';
 import { AuthGuard } from 'src/core/gaurd/auth.gaurd';

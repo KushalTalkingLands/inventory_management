@@ -1,8 +1,8 @@
 import { HttpException, HttpStatus, Inject, Injectable, Logger } from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
-import { CreateInventoryDto } from "../dto/restaurant.dto";
-import { Inventory } from "../interface/restaurant.interface";
+import { CreateInventoryDto } from "../dto/inventory.dto";
+import { Inventory } from "../interface/inventory.interface";
 import { LoggerConstant } from "../constants/loggerConstant";
 import { dbConfig } from "../config/dbConfig";
 
