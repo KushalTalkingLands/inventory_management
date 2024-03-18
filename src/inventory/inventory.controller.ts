@@ -6,7 +6,7 @@ import { appConfig } from 'src/core/config/appConfig';
 import { LoggerConstant } from 'src/core/constants/loggerConstant';
 import { AuthGuard } from 'src/core/gaurd/auth.gaurd';
 
-@Controller(appConfig.restaurantController)
+@Controller(appConfig.inventoryController)
 export class InventoryController {
     private readonly logger = new Logger(InventoryController.name);
     constructor(private readonly inventoryService: InventoryService) { }
@@ -37,8 +37,8 @@ export class InventoryController {
         }
     }
 
-    @Get(appConfig.restaurantParamId)
-    async findOne(@Param(appConfig.restaurantId) id: string): Promise<Inventory> {
+    @Get(appConfig.inventoryParamId)
+    async findOne(@Param(appConfig.inventoryId) id: string): Promise<Inventory> {
         // return 
         try{
             const findone = this.inventoryService.findById(id);
@@ -50,12 +50,12 @@ export class InventoryController {
             }
     }
 
-    @Put(appConfig.restaurantParamId)
+    @Put(appConfig.inventoryParamId)
     @UseGuards(AuthGuard)
-    async update(@Param(appConfig.restaurantId) id: string, @Body() updateRestaurantDto: CreateInventoryDto): Promise<Inventory> {
+    async update(@Param(appConfig.inventoryId) id: string, @Body() updateinventoryDto: CreateInventoryDto): Promise<Inventory> {
         // return 
         try{
-            const update = this.inventoryService.update(id, updateRestaurantDto);
+            const update = this.inventoryService.update(id, updateinventoryDto);
             this.logger.log(LoggerConstant.updateOneInventorysDone)
             return update
             }catch(err){
@@ -64,9 +64,9 @@ export class InventoryController {
             }
     }
 
-    @Delete(appConfig.restaurantParamId)
+    @Delete(appConfig.inventoryParamId)
     @UseGuards(AuthGuard)
-    async remove(@Param(appConfig.restaurantId) id: string): Promise<Inventory> {
+    async remove(@Param(appConfig.inventoryId) id: string): Promise<Inventory> {
         // return 
         try{
             const deleteres = this.inventoryService.delete(id);

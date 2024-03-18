@@ -11,8 +11,8 @@ export class appConfig{
     public static readonly changePasswordPath = ":username/change-password"
     public static readonly newPassword = "newPassword"
 
-    //restaurant Config
-    public static readonly restaurantController = "inventory"
-    public static readonly restaurantParamId = ":id"
-    public static readonly restaurantId = "id"
+    //inventory Config
+    public static readonly inventoryController = "inventory"
+    public static readonly inventoryParamId = ":id"
+    public static readonly inventoryId = "id"
 }
